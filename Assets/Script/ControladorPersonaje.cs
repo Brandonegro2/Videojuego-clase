@@ -17,7 +17,7 @@ public class ControladorPersonaje : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Jump"))
+        if (Input.GetButtonDown("Jump") && Comprobarsuelo.estaEnSuelo)
         {
             rigidbody.AddForce(Vector2.up * alturaSalto);
             animator.SetBool("Saltar", true);
