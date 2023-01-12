@@ -23,4 +23,11 @@ public class ControladorPersonaje : MonoBehaviour
             animator.SetBool("Saltar", true);
         }
     }
+    public void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.transform.tag == "Enemigo")
+        {
+            Destroy(gameObject);
+        }
+    }
 }

@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] public float tiempo = 0;
     [SerializeField] TMP_Text textoTiempo;
     [SerializeField] public int mejorPuntuacion, puntuacionActual;
+    public static GameManager Instancia;
 
     private void Awake()
     {
@@ -37,7 +38,8 @@ public class GameManager : MonoBehaviour
 
     }
 
-    public void Reiniciar()
+    
+ public void Reiniciar()
     {
 
     }
