@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 997
   m_ShowMode: 4
-  m_Title: Hierarchy
+  m_Title: Project
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -100,7 +100,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 200}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 0
-  controlID: 79
+  controlID: 125
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -146,7 +146,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 200}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 16
+  controlID: 90
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -166,8 +166,8 @@ MonoBehaviour:
     y: 0
     width: 256
     height: 947
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
@@ -218,8 +218,8 @@ MonoBehaviour:
     y: 0
     width: 422
     height: 947
-  m_MinSize: {x: 276, y: 71}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
@@ -346,7 +346,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: d48fffff6a92ffffeebeffff32c5ffff
+      m_ExpandedIDs: 1afbfffff45f0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -452,33 +452,33 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/TextMesh Pro/Fonts
+    - Assets/Scripts
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/TextMesh Pro/Fonts
+  - Assets/Scripts
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\milag\Documents\GitHub\Videojuego-clase
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: f6ad0000
-    m_LastClickedID: 44534
-    m_ExpandedIDs: 000000002e9200008e960000cc9600000297000052970000f2ad000000ca9a3b
+    m_SelectedIDs: 28610000
+    m_LastClickedID: 24872
+    m_ExpandedIDs: 000000000c6100000e6100001061000012610000146100002c61000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: Player-jump
-      m_OriginalName: Player-jump
+      m_Name: Scripts
+      m_OriginalName: Scripts
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 38734
+      m_UserData: 24872
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
       m_OriginalEventType: 0
@@ -495,7 +495,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 
+    m_ExpandedIDs: 000000000c6100000e610000106100001261000014610000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -522,7 +522,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: 1297000082960000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
