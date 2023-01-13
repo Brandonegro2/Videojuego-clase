@@ -7,6 +7,8 @@ public class MoverEnemigo : MonoBehaviour
     [SerializeField] Camera camara;
     [SerializeField] Vector2 posicionMinima, posicionInicial;
     [SerializeField] float velocidad;
+    [SerializeField] ControladorPersonaje controladorPersonaje;
+    public bool playerDestroyed = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,6 +20,15 @@ public class MoverEnemigo : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Debug.Log(GameObject.FindGameObjectsWithTag("Player").Length);
+
+        if(GameObject.FindGameObjectsWithTag("Player").Length < 0)
+        {
+            StopAllCoroutines();
+        }
+
+
+
         transform.Translate(Vector2.left * Time.deltaTime * velocidad);
         if (transform.position.x < posicionMinima.x)
         {
@@ -25,4 +36,5 @@ public class MoverEnemigo : MonoBehaviour
             velocidad += 1;
         }
     }
+    
 }
