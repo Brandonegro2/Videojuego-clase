@@ -5,23 +5,15 @@ using UnityEngine;
 public class SumarPuntos : MonoBehaviour
 {
     // Start is called before the first frame update
-    [SerializeField] public int mejorPuntuacion, puntuacionActual;
-
-    void Start()
+    
+    private void OnTriggerEnter2D(Collider2D other)
     {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.transform.tag == "Enemigo")
+        if (other.transform.tag == "Enemigo")   
         {
-            GameManager.Instancia.ActualizarPuntuacion(1);
+            {
+                GameManager.Instancia.SumaPuntos(1);
+               
+            }
         }
     }
 }
