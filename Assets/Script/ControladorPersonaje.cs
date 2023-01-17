@@ -27,7 +27,7 @@ public class ControladorPersonaje : MonoBehaviour
     {
         if (collision.transform.tag == "Enemigo")
         {
-            Destroy(gameObject);
+            GameManager.Instancia.Perder();
         }
     }
 }
