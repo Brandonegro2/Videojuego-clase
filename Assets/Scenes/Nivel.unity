@@ -1349,6 +1349,8 @@ MonoBehaviour:
   posicionMinima: {x: 0, y: 0}
   posicionInicial: {x: 0, y: 0}
   velocidad: 3
+  controladorPersonaje: {fileID: 1466453446}
+  playerDestroyed: 0
 --- !u!95 &1087178150
 Animator:
   serializedVersion: 4
@@ -1708,7 +1710,7 @@ GameObject:
   - component: {fileID: 1466453446}
   m_Layer: 0
   m_Name: Personaje
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
