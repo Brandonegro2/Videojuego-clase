@@ -9,6 +9,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] TMP_Text textoTiempo;
     [SerializeField] public int mejorPuntuacion, puntuacionActual;
     public static GameManager Instancia;
+    [SerializeField] GameObject textoGameOver, botonGameOver, jugador, enemigo;
+    [SerializeField] bool cronometro;
 
     private void Awake()
     {
@@ -19,6 +21,13 @@ public class GameManager : MonoBehaviour
         
         mejorPuntuacion = PlayerPrefs.GetInt("MejorPuntuacion");
     }
+
+    void Start()
+    {
+        textoGameOver.SetActive(false);
+        botonGameOver.SetActive(false);
+    }
+
     void Update()
     {
         tiempo += Time.deltaTime;
@@ -40,12 +49,22 @@ public class GameManager : MonoBehaviour
     }
     public void Perder()
     {
-
+        jugador.SetActive(false);
+        enemigo.SetActive(false);
+        textoGameOver.SetActive(true);
+        botonGameOver.SetActive(true);
+        cronometro = false;
     }
     
 
     public void Reiniciar()
     {
-
+        puntuacionActual = 0;
+        tiempo = 0;
+        jugador.SetActive(true);
+        enemigo.SetActive(true);
+        textoGameOver.SetActive(false);
+        botonGameOver.SetActive(false);
+        cronometro = true;
     }
 }

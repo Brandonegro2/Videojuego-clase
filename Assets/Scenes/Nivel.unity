@@ -2248,6 +2248,11 @@ MonoBehaviour:
   textoTiempo: {fileID: 1750524395}
   mejorPuntuacion: 0
   puntuacionActual: 0
+  textoGameOver: {fileID: 563925330}
+  botonGameOver: {fileID: 475234467}
+  jugador: {fileID: 1466453440}
+  enemigo: {fileID: 1087178148}
+  cronometro: 0
 --- !u!4 &1802623903
 Transform:
   m_ObjectHideFlags: 0
