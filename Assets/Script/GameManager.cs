@@ -49,6 +49,7 @@ public class GameManager : MonoBehaviour
     }
     public void Perder()
     {
+        
         jugador.SetActive(false);
         enemigo.SetActive(false);
         textoGameOver.SetActive(true);

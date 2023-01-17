@@ -36,5 +36,9 @@ public class MoverEnemigo : MonoBehaviour
             velocidad += 1;
         }
     }
-    
+    public void IniciarEnemigo()
+    {
+        posicionInicial = transform.position;
+        velocidad = 3;
+    }
 }
