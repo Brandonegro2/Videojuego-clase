@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] public int mejorPuntuacion, puntuacionActual;
     public static GameManager Instancia;
     [SerializeField] GameObject textoGameOver, botonGameOver, jugador, enemigo;
-    [SerializeField] bool cronometro;
+    [SerializeField] bool cronometro = true;
 
     private void Awake()
     {
@@ -30,11 +30,14 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        tiempo += Time.deltaTime;
-        int minutos = (int)tiempo / 60;
-        int segundos = (int)tiempo % 60;
-        // textoTiempo.text = minutos + ":" + segundos;
-        textoTiempo.text = string.Format("{0:00}:{1:00}", minutos, segundos);
+        if (cronometro)
+        {
+            tiempo += Time.deltaTime;
+            int minutos = (int)tiempo / 60;
+            int segundos = (int)tiempo % 60;
+            // textoTiempo.text = minutos + ":" + segundos;
+            textoTiempo.text = string.Format("{0:00}:{1:00}", minutos, segundos);
+        }   
     }
 
    
@@ -60,12 +63,13 @@ public class GameManager : MonoBehaviour
 
     public void Reiniciar()
     {
+        enemigo.GetComponent<MoverEnemigo>().IniciarEnemigo();
         puntuacionActual = 0;
         tiempo = 0;
         jugador.SetActive(true);
         enemigo.SetActive(true);
         textoGameOver.SetActive(false);
         botonGameOver.SetActive(false);
-        cronometro = true;
+        cronometro = true;      
     }
 }

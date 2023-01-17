@@ -483,7 +483,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 475234470}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1802623902}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: Reiniciar
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &475234470
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1349,6 +1361,7 @@ MonoBehaviour:
   posicionMinima: {x: 0, y: 0}
   posicionInicial: {x: 0, y: 0}
   velocidad: 3
+  limiteVelocidad: 5
   controladorPersonaje: {fileID: 1466453446}
   playerDestroyed: 0
 --- !u!95 &1087178150
@@ -2252,7 +2265,7 @@ MonoBehaviour:
   botonGameOver: {fileID: 475234467}
   jugador: {fileID: 1466453440}
   enemigo: {fileID: 1087178148}
-  cronometro: 0
+  cronometro: 1
 --- !u!4 &1802623903
 Transform:
   m_ObjectHideFlags: 0
