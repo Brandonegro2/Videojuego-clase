@@ -16,7 +16,8 @@ public class GameManager : MonoBehaviour
         {
             Instancia = this;
         }
-            mejorPuntuacion = PlayerPrefs.GetInt("MejorPuntuacion");
+        
+        mejorPuntuacion = PlayerPrefs.GetInt("MejorPuntuacion");
     }
     void Update()
     {
@@ -27,22 +28,14 @@ public class GameManager : MonoBehaviour
         textoTiempo.text = string.Format("{0:00}:{1:00}", minutos, segundos);
     }
 
-    public void ActualizarPuntuacion(int puntos)
-    {
-        puntuacionActual += puntos;
-        if (puntuacionActual > mejorPuntuacion)
-        {
-            mejorPuntuacion = puntuacionActual;
-            PlayerPrefs.SetInt("MejorPuntuacion", mejorPuntuacion);
-        }
-    }
+   
     public void SumaPuntos(int puntos)
     {
         puntuacionActual += puntos;
         if (puntuacionActual > mejorPuntuacion)
         {
             mejorPuntuacion = puntuacionActual;
-            PlayerPrefs.SetInt("mejorPuntuacion", mejorPuntuacion);
+            PlayerPrefs.SetInt("MejorPuntuacion", mejorPuntuacion);
         }
     }
     public void Perder()
