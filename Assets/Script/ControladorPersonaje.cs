@@ -19,6 +19,20 @@ public class ControladorPersonaje : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetButtonDown("Vertical") && Comprobarsuelo.estaEnSuelo)
+        {
+            audioSource.clip = sonidos[0];
+            audioSource.Play();
+            animator.SetBool("Deslizarse", true);
+        }
+
+        if (Input.GetButtonUp("Vertical") && Comprobarsuelo.estaEnSuelo)
+        {
+            audioSource.clip = sonidos[0];
+            audioSource.Play();
+            animator.SetBool("Deslizarse", false);
+        }
+
         if (Input.GetButtonDown("Jump") && Comprobarsuelo.estaEnSuelo)
         {
             audioSource.clip = sonidos[0];
