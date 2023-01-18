@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MoverEnemigo : MonoBehaviour
+public class MoverEnemigo2 : MonoBehaviour
 {
     [SerializeField] Camera camara;
     [SerializeField] Vector2 posicionMinima, posicionInicial;
-    [SerializeField] float velocidad = 3, limiteVelocidad = 20;
+    [SerializeField] float velocidad = 5;
     [SerializeField] ControladorPersonaje controladorPersonaje;
     // Start is called before the first frame update
     void Start()
@@ -14,6 +14,7 @@ public class MoverEnemigo : MonoBehaviour
         camara = Camera.main;
         posicionMinima = camara.ViewportToWorldPoint(new Vector2(0, 0));
         posicionInicial = transform.position;
+        StartCoroutine(Reaparecer());
     }
 
     // Update is called once per frame
@@ -21,20 +22,20 @@ public class MoverEnemigo : MonoBehaviour
     {
         transform.Translate(Vector2.left * Time.deltaTime * velocidad);
 
-        if (transform.position.x < posicionMinima.x && velocidad < limiteVelocidad)
+        if (transform.position.x < posicionMinima.x)
         {
-            transform.position = posicionInicial;
-            velocidad += 1;
-        }
-        if (transform.position.x < posicionMinima.x && velocidad == limiteVelocidad)
-        {
-            transform.position = posicionInicial;
+            Reaparecer();
+            transform.position = posicionInicial;  
         }
     }
 
-    public void IniciarEnemigo()
+    IEnumerator Reaparecer()
+    {
+        yield return new WaitForSeconds(5);
+    }
+
+    public void IniciarEnemigo2()
     {
         transform.position = posicionInicial;
-        velocidad = 3;
     }
 }

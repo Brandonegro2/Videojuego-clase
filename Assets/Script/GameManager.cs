@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] TMP_Text textoTiempo;
     [SerializeField] public int mejorPuntuacion, puntuacionActual;
     public static GameManager Instancia;
-    [SerializeField] GameObject textoGameOver, botonGameOver, jugador, enemigo;
+    [SerializeField] GameObject textoGameOver, botonGameOver, jugador, enemigo, enemigo2;
     [SerializeField] bool cronometro = true;
     [SerializeField] AudioSource audioSource;
     [SerializeField] AudioClip[] sonidos;
@@ -58,6 +58,7 @@ public class GameManager : MonoBehaviour
         audioSource.Play();
         jugador.SetActive(false);
         enemigo.SetActive(false);
+        enemigo2.SetActive(false);
         textoGameOver.SetActive(true);
         botonGameOver.SetActive(true);
         cronometro = false;
@@ -67,10 +68,12 @@ public class GameManager : MonoBehaviour
     public void Reiniciar()
     {
         enemigo.GetComponent<MoverEnemigo>().IniciarEnemigo();
+        enemigo2.GetComponent<MoverEnemigo2>().IniciarEnemigo2();
         puntuacionActual = 0;
         tiempo = 0;
         jugador.SetActive(true);
         enemigo.SetActive(true);
+        enemigo2.SetActive(true);
         textoGameOver.SetActive(false);
         botonGameOver.SetActive(false);
         cronometro = true;      
