@@ -11,6 +11,8 @@ public class GameManager : MonoBehaviour
     public static GameManager Instancia;
     [SerializeField] GameObject textoGameOver, botonGameOver, jugador, enemigo;
     [SerializeField] bool cronometro = true;
+    [SerializeField] AudioSource audioSource;
+    [SerializeField] AudioClip[] sonidos;
 
     private void Awake()
     {
@@ -52,7 +54,8 @@ public class GameManager : MonoBehaviour
     }
     public void Perder()
     {
-        
+        audioSource.clip = sonidos[0];
+        audioSource.Play();
         jugador.SetActive(false);
         enemigo.SetActive(false);
         textoGameOver.SetActive(true);

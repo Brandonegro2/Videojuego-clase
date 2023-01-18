@@ -8,6 +8,8 @@ public class ControladorPersonaje : MonoBehaviour
     [SerializeField] Rigidbody2D rigidbody;
     [SerializeField] Animator animator;
     [SerializeField] float alturaSalto = 500;
+    [SerializeField] AudioSource audioSource;
+    [SerializeField] AudioClip[] sonidos;
     void Start()
     {
         rigidbody=GetComponent<Rigidbody2D>();
@@ -19,6 +21,8 @@ public class ControladorPersonaje : MonoBehaviour
     {
         if (Input.GetButtonDown("Jump") && Comprobarsuelo.estaEnSuelo)
         {
+            audioSource.clip = sonidos[0];
+            audioSource.Play();
             rigidbody.AddForce(Vector2.up * alturaSalto);
             animator.SetBool("Saltar", true);
         }
